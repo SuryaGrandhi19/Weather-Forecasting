@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background: linear-gradient(#a992c5, #DAC3F8) } */
+  background: url('https://images.unsplash.com/photo-1530908295418-a12e326966ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D'); /* adjust the path */
+  background-size: cover;       /* make it cover the whole page */
+  background-repeat: no-repeat; /* prevent tiling */
+  background-position: center;
+}
+
+  #root {
+    width:200%;
+  }
+  .container {
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  max-width: 410px;
+  border-radius: 10px;
+  background: linear-gradient(#80abd0, #8d9ed6);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.container::after{
+  content: "";
+  position:absolute;
+  left:0;
+  top:0;
+  opacity: 0.7;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  padding:20px;
+} 
+.search-section{
+  display: flex;
+  align-items: center;
+  gap:12px;
+  padding:25px;
+} 
+
+.search-section .search-form{
+  height:54px;
+  width:100%;
+  display: flex;
+
+
+}
+.search-section .search-input{
+  width:100%;
+  height:105%;
+  outline: none;
+  color:#131212;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 6px;
+  padding: 0 20px 0 50px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(12, 13, 13, 0.25);
+  transition: 0.1s ease;
+}
+
+.search-section .search-input:focus{
+ border-color:white(114, 116, 3);
+}
+
+.search-section .search-input::placeholder{
+ color:#ddd;
+ text-transform: none;
+ height: 100px;
+}
+
+.search-section .location-button{
+  height: 54px;
+  width:56px;
+  flex-shrink:0;
+  color:black;
+  border: radius 6px;
+  background:white;
+  border:1px solid rgba(255,255,255,0.25);
+}
+
+.search-section .location-button:hover {
+  color: #b39fdf;
+  border-color: #a38cd9;
+}
+.search-section .location-button span {
+  font-size: 1.3rem;
+}
+.weather-section :where(h2, p) {
+  color: #fff;
+}
+
+.current-weather {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 50px;
+  flex-direction: column;
+}
+.current-weather .weather-icon {
+  width: 140px;
+  aspect-ratio: 1;
+}
+.current-weather .temperature {
+  margin: 18px 0;
+  display: flex;
+  font-size: 3.38rem;
+}
+
+.current-weather .temperature span {
+  font-size: 1.56rem;
+  font-weight: 400;
+  margin: 5px 0 0 2px;
+}
+.current-weather .description {
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0 10px;
+}
+.hourly-forecast {
+  padding: 16px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.weather-section{
+  color:#fff;
+}
+
+
+  .hourly-forecast .weather-list{
+    display: flex;
+    gap:18px;
+    overflow: auto;
+    list-style: none;
+    padding-bottom: 16px;
+    margin-bottom: -16px;
+    scrollbar-color: transparent transparent;
+    
+  }
+
+
+   .hourly-forecast:hover .weather-list{
+   scrollbar-color:white transparent;
+
+
+   }
+
+   .hourly-forecast .weather-items{
+    display: flex;
+    gap:7px;
+    flex-direction: column;
+    align-items: center;
+   }
+
+  .hourly-forecast .weather-items .weather-icon{
+    width:28px;
+    aspect-ratio: 1;
+  }
+
+  .no-results {
+  min-height: 460px;
+  display: flex;
+  color: #fff;
+  padding: 60px 40px 40px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.no-results .title {
+  margin: 25px 0 15px;
+}
+.no-results .message {
+  line-height: 23px;
+}
+/* Responsive media query code for small screen */
+@media (max-width: 624px) {
+  body,
+  .search-section {
+    padding: 20px;
+  }
+  .hourly-forecast {
+    padding: 16px 20px;
+  }
+  .hourly-forecast .weather-list {
+    gap: 24px;
+  }
+  .no-results {
+    padding: 30px;
+    min-height: 458px;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-style:initial;
+  color: #082602;
+  background-color: transparent; /* semi-transparent background */
+  font-size: 1.7rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
